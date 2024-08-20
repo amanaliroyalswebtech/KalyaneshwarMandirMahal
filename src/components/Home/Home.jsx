@@ -5,16 +5,15 @@ import mandirImage3 from '/src/assets/mandirImage3.jpg';
 import mandirImage4 from '/src/assets/mandirImage4.jpg';
 import mandirImage5 from '/src/assets/mandirImage5.jpg';
 import mandirImage6 from '/src/assets/mandirImage6.jpg';
-import Header from '../Header/Header';
+
 
 const Home = () => {
   return (
     <>
-    <Header/>
     <section id="home" className="py-16 bg-orange-50">
       {/* Heading */}
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold text-orange-700">Kalyaneshwari Mata Mandir</h2>
+        <h2 className="text-4xl font-bold text-orange-700">Kalyaneshwari Mandir</h2>
         <p className="text-lg text-gray-600 mt-4">
           Welcome to the sacred Kalyaneshwari Mata Mandir, a place of devotion and peace.
         </p>

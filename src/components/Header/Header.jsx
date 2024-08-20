@@ -1,9 +1,10 @@
-import React from 'react'
-import image1 from "/src/assets/headerlogo4.jpg"
+import React from 'react';
+import { Link } from 'react-router-dom';
+import image1 from "/src/assets/headerlogo4.jpg";
 
 const Header = () => {
   return (
-    <header className="relative bg-white shadow-md  top-0 z-50">
+    <header className="relative bg-white shadow-md top-0 z-50">
       {/* Image Section */}
       <div className="w-full h-[500px] overflow-hidden">
         <img src={image1} alt="Kalyaneshwari Mandir" className="w-full h-full object-cover" />
@@ -15,78 +16,78 @@ const Header = () => {
           <ul className="flex space-x-6">
             {/* Dropdown for Home */}
             <li className="relative group">
-              <a href="#home" className="hover:text-orange-600 focus:outline-none">
+              <Link to="/" className="hover:text-orange-600 focus:outline-none">
                 Home
-              </a>
+              </Link>
               <div className="absolute left-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity ease-in-out duration-300">
-                <a href="#home1" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Home 1</a>
-                <a href="#home2" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Home 2</a>
+                <Link to="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Home 1</Link>
+                <Link to="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Home 2</Link>
               </div>
             </li>
 
             {/* Dropdown for About */}
             <li className="relative group">
-              <a href="#about" className="hover:text-orange-600 focus:outline-none">
+              <Link to="/about" className="hover:text-orange-600 focus:outline-none">
                 About
-              </a>
+              </Link>
               <div className="absolute left-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity ease-in-out duration-300">
-                <a href="#about1" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">About 1</a>
-                <a href="#about2" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">About 2</a>
+                <Link to="/about" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">About 1</Link>
+                <Link to="/about" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">About 2</Link>
               </div>
             </li>
 
             {/* Dropdown for Events */}
             <li className="relative group">
-              <a href="#events" className="hover:text-orange-600 focus:outline-none">
+              <Link to="/events" className="hover:text-orange-600 focus:outline-none">
                 Events
-              </a>
+              </Link>
               <div className="absolute left-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity ease-in-out duration-300">
-                <a href="#event1" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Event 1</a>
-                <a href="#event2" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Event 2</a>
+                <Link to="/events" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Event 1</Link>
+                <Link to="/events" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Event 2</Link>
               </div>
             </li>
 
             {/* Dropdown for Gallery */}
             <li className="relative group">
-              <a href="#gallery" className="hover:text-orange-600 focus:outline-none">
+              <Link to="/gallery" className="hover:text-orange-600 focus:outline-none">
                 Gallery
-              </a>
+              </Link>
               <div className="absolute left-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity ease-in-out duration-300">
-                <a href="#gallery1" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Gallery 1</a>
-                <a href="#gallery2" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Gallery 2</a>
+                <Link to="/gallery" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Gallery 1</Link>
+                <Link to="/gallery" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Gallery 2</Link>
               </div>
             </li>
 
             {/* Dropdown for Tenders */}
             <li className="relative group">
-              <a href="#tenders" className="hover:text-orange-600 focus:outline-none">
+              <Link to="/tenders" className="hover:text-orange-600 focus:outline-none">
                 Tenders
-              </a>
+              </Link>
               <div className="absolute left-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity ease-in-out duration-300">
-                <a href="#tender1" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Tender 1</a>
-                <a href="#tender2" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Tender 2</a>
+                <Link to="/tenders" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Tender 1</Link>
+                <Link to="/tenders" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Tender 2</Link>
               </div>
             </li>
 
             {/* Dropdown for Donation */}
             <li className="relative group">
-              <a href="#donation" className="hover:text-orange-600 focus:outline-none">
+              <Link to="/donation" className="hover:text-orange-600 focus:outline-none">
                 Donation
-              </a>
+              </Link>
               <div className="absolute left-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity ease-in-out duration-300">
-                <a href="#donation1" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Donation 1</a>
-                <a href="#donation2" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Donation 2</a>
+                <Link to="/donation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Donation 1</Link>
+                <Link to="/donation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Donation 2</Link>
               </div>
             </li>
 
             {/* Dropdown for Contact */}
             <li className="relative group">
-              <a href="#contact" className="hover:text-orange-600 focus:outline-none">
+              <Link to="/contact" className="hover:text-orange-600 focus:outline-none">
                 Contact
-              </a>
+              </Link>
               <div className="absolute left-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity ease-in-out duration-300">
-                <a href="#contact1" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Contact 1</a>
-                <a href="#contact2" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Contact 2</a>
+                <Link to="/contact" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Contact 1</Link>
+                <Link to="/contact" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Contact 2</Link>
               </div>
             </li>
           </ul>
