@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import mandirImage1 from '/src/assets/mandirImage1.jpg';
 import mandirImage2 from '/src/assets/mandirImage2.jpg';
 import mandirImage3 from '/src/assets/mandirImage3.jpg';
@@ -8,9 +10,13 @@ import mandirImage6 from '/src/assets/mandirImage6.jpg';
 import mandala1 from '/src/assets/mandala1.png'; // Add your image path here
 
 const Home = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 }); // Initialize AOS with a duration of 1000ms
+  }, []);
+
   return (
     <>
-      <section id="home" className="py-16 bg-orange-50 relative">
+      <section id="home" className="py-16 bg-orange-100 relative">
         {/* Top Left Image */}
         <img
           src={mandala1}
@@ -38,7 +44,7 @@ const Home = () => {
           {/* Image Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             {/* Block 1 */}
-            <div className="relative group">
+            <div className="relative group" data-aos="fade-right">
               <img
                 src={mandirImage1}
                 alt="Mandir 1"
@@ -53,7 +59,7 @@ const Home = () => {
             </div>
 
             {/* Block 2 */}
-            <div className="relative group">
+            <div className="relative group" data-aos="fade-left">
               <img
                 src={mandirImage2}
                 alt="Mandir 2"
@@ -68,7 +74,7 @@ const Home = () => {
             </div>
 
             {/* Block 3 */}
-            <div className="relative group">
+            <div className="relative group" data-aos="fade-right">
               <img
                 src={mandirImage3}
                 alt="Mandir 3"
@@ -83,7 +89,7 @@ const Home = () => {
             </div>
 
             {/* Block 4 */}
-            <div className="relative group">
+            <div className="relative group" data-aos="fade-left">
               <img
                 src={mandirImage4}
                 alt="Mandir 4"
@@ -98,7 +104,7 @@ const Home = () => {
             </div>
 
             {/* Block 5 */}
-            <div className="relative group">
+            <div className="relative group" data-aos="fade-right">
               <img
                 src={mandirImage5}
                 alt="Mandir 5"
@@ -113,7 +119,7 @@ const Home = () => {
             </div>
 
             {/* Block 6 */}
-            <div className="relative group">
+            <div className="relative group" data-aos="fade-left">
               <img
                 src={mandirImage6}
                 alt="Mandir 6"

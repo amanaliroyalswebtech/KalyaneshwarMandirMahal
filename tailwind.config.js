@@ -8,6 +8,9 @@ export default {
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
       },
+      backgroundImage: {
+        'bgmandirimage' : "url('src/assets/bgmandirimage.png')"
+      }
     },
   },
   plugins: [],

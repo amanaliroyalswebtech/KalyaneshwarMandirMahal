@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import PopupCard from '../PopupCard/PopupCard';
-  // Import the PopupCard component
+import PopupCard from '../PopupCard/PopupCard';  // Import the PopupCard component
+import image1 from '/src/assets/shivjilogo1.png'
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [currentImage, setCurrentImage] = useState(0)
-  const [showPopup, setShowPopup] = useState(true) // State to control popup visibility
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [currentImage, setCurrentImage] = useState(0);
+  const [showPopup, setShowPopup] = useState(true); // State to control popup visibility
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
@@ -25,34 +25,10 @@ const Header = () => {
   }, [images.length]);
 
   return (
-    <header className="relative bg-white shadow-md top-0 z-50">
-      {/* Image Modal Section */}
-      <div className="relative w-full h-[600px] overflow-hidden">
-        {images.map((src, index) => (
-          <img
-            key={index}
-            src={src}
-            alt={`Mandir Image ${index + 1}`}
-            className={`absolute transition-opacity duration-1000 ease-in-out ${
-              index === currentImage ? 'opacity-100 animate-zoom' : 'opacity-0'
-            } w-full h-full object-cover`}
-          />
-        ))}
-        
-        {/* Overlay Text */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-40">
-          <div className="text-center text-white">
-            <h2 className="text-4xl font-bold mb-4">Kalyaneshwar Mandir</h2>
-            <p className="text-lg italic">
-              "May the divine light of Kalyaneshwar guide you on the path of peace and prosperity."
-            </p>
-          </div>
-        </div>
-      </div>
-
+    <header className="relative bg-orange-100 shadow-md top-0 z-50">
       {/* Navbar Section */}
-      <nav className="bg-white bg-opacity-70 p-4 shadow-md">
-        <div className="container mx-auto flex items-center justify-between lg:justify-center">
+      <nav className="bg-white bg-opacity-70 p-6 shadow-md z-40 relative h-[80px] flex items-center">
+        <div className="container mx-auto flex items-center w-full">
           {/* Toggle Button for Mobile */}
           <button
             className="lg:hidden text-gray-600 focus:outline-none"
@@ -70,75 +46,78 @@ const Header = () => {
           </button>
 
           {/* Navbar Links */}
-          <ul className={`lg:flex lg:space-x-6 ${isMenuOpen ? 'block' : 'hidden'} lg:flex`}>
+          <ul className={`lg:flex lg:space-x-6 ${isMenuOpen ? 'block' : 'hidden'} lg:flex w-full gap-8 items-center`}>
             {/* Dropdown for Home */}
-            <li className="relative group">
+            <li className='ml-40'>
+              <img src={image1} alt="omlogo" className='h-20' />
+            </li>
+            <li className="relative group text-center">
               <Link to="/" className="hover:text-orange-600 focus:outline-none">
                 Home
               </Link>
             </li>
 
             {/* Dropdown for About */}
-            <li className="relative group">
+            <li className="relative group text-center">
               <Link to="/about" className="hover:text-orange-600 focus:outline-none">
                 About
               </Link>
-              <div className="absolute left-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity ease-in-out duration-300">
+              <div className="absolute left-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity ease-in-out duration-300 z-50">
                 <Link to="/about" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">About us</Link>
                 <Link to="/about" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">History</Link>
               </div>
             </li>
 
             {/* Dropdown for Events */}
-            <li className="relative group">
+            <li className="relative group text-center">
               <Link to="/events" className="hover:text-orange-600 focus:outline-none">
                 Events
               </Link>
-              <div className="absolute left-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity ease-in-out duration-300">
+              <div className="absolute left-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity ease-in-out duration-300 z-50">
                 <Link to="/events" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Upcoming</Link>
                 <Link to="/events" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Recent</Link>
               </div>
             </li>
 
             {/* Dropdown for Gallery */}
-            <li className="relative group">
+            <li className="relative group text-center">
               <Link to="/gallery" className="hover:text-orange-600 focus:outline-none">
                 Gallery
               </Link>
-              <div className="absolute left-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity ease-in-out duration-300">
+              <div className="absolute left-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity ease-in-out duration-300 z-50">
                 <Link to="/gallery" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Mandir Images</Link>
                 <Link to="/gallery" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Mandir Videos</Link>
               </div>
             </li>
 
             {/* Dropdown for Tenders */}
-            <li className="relative group">
+            <li className="relative group text-center">
               <Link to="/tenders" className="hover:text-orange-600 focus:outline-none">
                 Tenders
               </Link>
-              <div className="absolute left-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity ease-in-out duration-300">
+              <div className="absolute left-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity ease-in-out duration-300 z-50">
                 <Link to="/tenders" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Latest Tender</Link>
                 <Link to="/tenders" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Old Tenders</Link>
               </div>
             </li>
 
             {/* Dropdown for Donation */}
-            <li className="relative group">
+            <li className="relative group text-center">
               <Link to="/donation" className="hover:text-orange-600 focus:outline-none">
                 Donation
               </Link>
-              <div className="absolute left-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity ease-in-out duration-300">
+              <div className="absolute left-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity ease-in-out duration-300 z-50">
                 <Link to="/donation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Donation</Link>
                 <Link to="/donation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Charity</Link>
               </div>
             </li>
 
             {/* Dropdown for Contact */}
-            <li className="relative group">
+            <li className="relative group text-center">
               <Link to="/contact" className="hover:text-orange-600 focus:outline-none">
                 Contact
               </Link>
-              <div className="absolute left-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity ease-in-out duration-300">
+              <div className="absolute left-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity ease-in-out duration-300 z-50">
                 <Link to="/contact" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Contact us</Link>
                 <Link to="/contact" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Whatsapp</Link>
               </div>
@@ -147,9 +126,33 @@ const Header = () => {
         </div>
       </nav>
 
+      {/* Image Modal Section */}
+      <div className="relative w-full h-[600px] overflow-hidden z-30">
+        {images.map((src, index) => (
+          <img
+            key={index}
+            src={src}
+            alt={`Mandir Image ${index + 1}`}
+            className={`absolute transition-opacity duration-1000 ease-in-out ${
+              index === currentImage ? 'opacity-100 animate-zoom' : 'opacity-0'
+            } w-full h-full object-cover`}
+          />
+        ))}
+        
+        {/* Overlay Text */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-40 z-20">
+          <div className="text-center text-white">
+            <h2 className="text-4xl font-bold mb-4">Kalyaneshwar Mandir</h2>
+            <p className="text-lg italic">
+              "May the divine light of Kalyaneshwar guide you on the path of peace and prosperity."
+            </p>
+          </div>
+        </div>
+      </div>
+
       {/* Mobile Menu */}
       <div
-        className={`lg:hidden fixed inset-0 bg-white shadow-lg transition-transform transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
+        className={`lg:hidden fixed inset-0 bg-white shadow-lg transition-transform transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} z-50`}
         onClick={() => setIsMenuOpen(false)}
       >
         <div className="p-4">
@@ -192,7 +195,7 @@ const Header = () => {
 
       {/* Show Pop-Up Card */}
       {showPopup && (
-        <PopupCard onClose={() => setShowPopup(false)}/>
+        <PopupCard onClose={() => setShowPopup(false)} />
       )}
     </header>
   );
