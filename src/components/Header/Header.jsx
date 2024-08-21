@@ -1,17 +1,53 @@
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import image1 from "/src/assets/headerlogo4.jpg";
+import PopupCard from '../PopupCard/PopupCard';
+  // Import the PopupCard component
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [currentImage, setCurrentImage] = useState(0)
+  const [showPopup, setShowPopup] = useState(true) // State to control popup visibility
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
+  // Images for the modal
+  const images = [
+    '/src/assets/mandirimage3.3.jpg',
+    '/src/assets/mandirimage1.3.avif',
+    '/src/assets/headerlogo4.jpg',
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % images.length);
+    }, 4000); // 4 seconds delay
+    return () => clearInterval(interval);
+  }, [images.length]);
+
   return (
     <header className="relative bg-white shadow-md top-0 z-50">
-      {/* Image Section */}
-      <div className="w-full h-[500px] overflow-hidden">
-        <img src={image1} alt="Kalyaneshwari Mandir" className="w-full h-full object-cover" />
+      {/* Image Modal Section */}
+      <div className="relative w-full h-[600px] overflow-hidden">
+        {images.map((src, index) => (
+          <img
+            key={index}
+            src={src}
+            alt={`Mandir Image ${index + 1}`}
+            className={`absolute transition-opacity duration-1000 ease-in-out ${
+              index === currentImage ? 'opacity-100 animate-zoom' : 'opacity-0'
+            } w-full h-full object-cover`}
+          />
+        ))}
+        
+        {/* Overlay Text */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-40">
+          <div className="text-center text-white">
+            <h2 className="text-4xl font-bold mb-4">Kalyaneshwar Mandir</h2>
+            <p className="text-lg italic">
+              "May the divine light of Kalyaneshwar guide you on the path of peace and prosperity."
+            </p>
+          </div>
+        </div>
       </div>
 
       {/* Navbar Section */}
@@ -40,10 +76,6 @@ const Header = () => {
               <Link to="/" className="hover:text-orange-600 focus:outline-none">
                 Home
               </Link>
-              <div className="absolute left-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity ease-in-out duration-300">
-                <Link to="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Home 1</Link>
-                <Link to="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Home 2</Link>
-              </div>
             </li>
 
             {/* Dropdown for About */}
@@ -52,8 +84,8 @@ const Header = () => {
                 About
               </Link>
               <div className="absolute left-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity ease-in-out duration-300">
-                <Link to="/about" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">About 1</Link>
-                <Link to="/about" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">About 2</Link>
+                <Link to="/about" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">About us</Link>
+                <Link to="/about" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">History</Link>
               </div>
             </li>
 
@@ -63,8 +95,8 @@ const Header = () => {
                 Events
               </Link>
               <div className="absolute left-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity ease-in-out duration-300">
-                <Link to="/events" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Event 1</Link>
-                <Link to="/events" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Event 2</Link>
+                <Link to="/events" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Upcoming</Link>
+                <Link to="/events" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Recent</Link>
               </div>
             </li>
 
@@ -74,8 +106,8 @@ const Header = () => {
                 Gallery
               </Link>
               <div className="absolute left-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity ease-in-out duration-300">
-                <Link to="/gallery" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Gallery 1</Link>
-                <Link to="/gallery" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Gallery 2</Link>
+                <Link to="/gallery" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Mandir Images</Link>
+                <Link to="/gallery" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Mandir Videos</Link>
               </div>
             </li>
 
@@ -85,8 +117,8 @@ const Header = () => {
                 Tenders
               </Link>
               <div className="absolute left-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity ease-in-out duration-300">
-                <Link to="/tenders" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Tender 1</Link>
-                <Link to="/tenders" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Tender 2</Link>
+                <Link to="/tenders" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Latest Tender</Link>
+                <Link to="/tenders" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Old Tenders</Link>
               </div>
             </li>
 
@@ -96,8 +128,8 @@ const Header = () => {
                 Donation
               </Link>
               <div className="absolute left-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity ease-in-out duration-300">
-                <Link to="/donation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Donation 1</Link>
-                <Link to="/donation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Donation 2</Link>
+                <Link to="/donation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Donation</Link>
+                <Link to="/donation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Charity</Link>
               </div>
             </li>
 
@@ -107,8 +139,8 @@ const Header = () => {
                 Contact
               </Link>
               <div className="absolute left-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity ease-in-out duration-300">
-                <Link to="/contact" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Contact 1</Link>
-                <Link to="/contact" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Contact 2</Link>
+                <Link to="/contact" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Contact us</Link>
+                <Link to="/contact" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Whatsapp</Link>
               </div>
             </li>
           </ul>
@@ -157,6 +189,11 @@ const Header = () => {
           </ul>
         </div>
       </div>
+
+      {/* Show Pop-Up Card */}
+      {showPopup && (
+        <PopupCard onClose={() => setShowPopup(false)}/>
+      )}
     </header>
   );
 };
