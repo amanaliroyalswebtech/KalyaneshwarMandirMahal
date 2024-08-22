@@ -1,14 +1,14 @@
-import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import PopupCard from '../PopupCard/PopupCard';  // Import the PopupCard component
+import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import PopupCard from '../PopupCard/PopupCard'
 import image1 from '/src/assets/shivjilogo1.png'
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [currentImage, setCurrentImage] = useState(0);
-  const [showPopup, setShowPopup] = useState(true); // State to control popup visibility
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [currentImage, setCurrentImage] = useState(0)
+  const [showPopup, setShowPopup] = useState(true)
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
 
   // Images for the modal
   const images = [
@@ -25,16 +25,16 @@ const Header = () => {
   }, [images.length]);
 
   return (
-    <header className="relative bg-orange-100 shadow-md top-0 z-50">
+   <header className="relative bg-orange-100  shadow-md top-0 w-full">
       {/* Navbar Section */}
-      <nav className="bg-white bg-opacity-70 p-6 shadow-md z-40 relative h-[80px] flex items-center">
+      <nav className="bg-white bg-opacity-70 p-6 shadow-md z-40 relative h-[120px] flex items-center">
         <div className="container mx-auto flex items-center w-full">
           {/* Toggle Button for Mobile */}
           <button
             className="lg:hidden text-gray-600 focus:outline-none"
             onClick={toggleMenu}
           >
-            <svg
+            {/* <svg
               className="w-6 h-6"
               fill="none"
               stroke="currentColor"
@@ -42,15 +42,24 @@ const Header = () => {
               xmlns="http://www.w3.org/2000/svg"
             >
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
-            </svg>
+            </svg> */}
+
           </button>
+          <div className='relative lg:hidden mx-auto'>
+  <div className ='absolute inset-0 bg-cover rotating-bg' />
+  <img src={image1} alt="omlogo" className='h-20 relative z-10'/>
+</div>
 
           {/* Navbar Links */}
           <ul className={`lg:flex lg:space-x-6 ${isMenuOpen ? 'block' : 'hidden'} lg:flex w-full gap-8 items-center`}>
             {/* Dropdown for Home */}
-            <li className='ml-40'>
-              <img src={image1} alt="omlogo" className='h-20' />
-            </li>
+            <li className='relative md:ml-40'>
+  {/* Background image with rotation */}
+  <div className='absolute inset-0 bg-cover  rotating-bg'></div>
+  {/* Shivji logo */}
+  <img src={image1} alt="omlogo" className='h-20 relative z-10 ' />
+</li>
+
             <li className="relative group text-center">
               <Link to="/" className="hover:text-orange-600 focus:outline-none">
                 Home
@@ -143,8 +152,7 @@ const Header = () => {
         <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-40 z-20">
           <div className="text-center text-white">
             <h2 className="text-4xl font-bold mb-4">Kalyaneshwar Mandir</h2>
-            <p className="text-lg italic">
-              "May the divine light of Kalyaneshwar guide you on the path of peace and prosperity."
+            <p className="text-lg italic">white"May the divine light of Kalyaneshwar guide you on the path of peace and prosperity."
             </p>
           </div>
         </div>
@@ -152,7 +160,7 @@ const Header = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`lg:hidden fixed inset-0 bg-white shadow-lg transition-transform transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} z-50`}
+        className={`lg:hidden fixed inset-0 bg-orange-500 shadow-lg transition-transform transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} z-50`}
         onClick={() => setIsMenuOpen(false)}
       >
         <div className="p-4">
@@ -167,27 +175,27 @@ const Header = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
-          <ul className="mt-4 space-y-2">
+          <ul className="mt-4 space-y-2 text-white">
             <li>
-              <Link to="/" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-orange-600">Home</Link>
+              <Link to="/" className="block px-4 py-2 text-white hover:bg-gray-200 hover:text-orange-600">Home</Link>
             </li>
             <li>
-              <Link to="/about" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-orange-600">About</Link>
+              <Link to="/about" className="block px-4 py-2 text-white hover:bg-gray-200 hover:text-orange-600">About</Link>
             </li>
             <li>
-              <Link to="/events" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-orange-600">Events</Link>
+              <Link to="/events" className="block px-4 py-2 text-white hover:bg-gray-200 hover:text-orange-600">Events</Link>
             </li>
             <li>
-              <Link to="/gallery" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-orange-600">Gallery</Link>
+              <Link to="/gallery" className="block px-4 py-2 text-white hover:bg-gray-200 hover:text-orange-600">Gallery</Link>
             </li>
             <li>
-              <Link to="/tenders" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-orange-600">Tenders</Link>
+              <Link to="/tenders" className="block px-4 py-2 text-white hover:bg-gray-200 hover:text-orange-600">Tenders</Link>
             </li>
             <li>
-              <Link to="/donation" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-orange-600">Donation</Link>
+              <Link to="/donation" className="block px-4 py-2 text-white hover:bg-gray-200 hover:text-orange-600">Donation</Link>
             </li>
             <li>
-              <Link to="/contact" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-orange-600">Contact</Link>
+              <Link to="/contact" className="block px-4 py-2 text-white hover:bg-gray-200 hover:text-orange-600">Contact</Link>
             </li>
           </ul>
         </div>
