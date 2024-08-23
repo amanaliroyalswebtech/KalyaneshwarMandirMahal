@@ -36,4 +36,19 @@
   }
 }
 
+
+/* footer */
+.footer-end {
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-term {
+  text-align: center;
+  margin-left: 35px;
+  margin-right: 35px;
+}
+
   

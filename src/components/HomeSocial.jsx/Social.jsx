@@ -37,7 +37,7 @@ const Social = () => {
 
   return (
     <div>
-      <div className="fixed bottom-7 right-0 z-50 flex flex-col items-center space-y-2 lg:p-4">
+      <div className="fixed bottom-20 right-0 z-50 flex flex-col items-center space-y-2 lg:p-4">
         {/* Music Control Button */}
         <a
           className="bg-[#c57b1f] border-2 border-white rounded-full p-3 text-white flex items-center justify-center cursor-pointer"

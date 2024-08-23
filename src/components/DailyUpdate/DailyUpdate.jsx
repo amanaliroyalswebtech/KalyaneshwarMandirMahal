@@ -155,7 +155,7 @@ const DailyUpdate = () => {
                             <p>{data.programname}</p>
                           </div>
                         </div>
-                        <hr />
+                        <hr className="udatehr"/>
                       </div>
                     ))}
                 </div>
@@ -190,7 +190,7 @@ const DailyUpdate = () => {
                       <div key={index} className="custom_text">
                         <p className="update-upcoming-fest">{item.data}</p>
 
-                        <hr />
+                        <hr className="udatehr"/>
                       </div>
                     ))}
                 </div>
@@ -222,7 +222,7 @@ const DailyUpdate = () => {
                         <p>
                           <a href={item.hyperlink}>{item.data}</a>
                         </p>
-                        <hr />
+                        <hr className="udatehr"/>
                       </div>
                     ))}
                 </div>

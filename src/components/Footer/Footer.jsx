@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
-    <footer className="bg-gray-900 text-white p-12">
-      <div className="container mx-auto flex flex-col md:flex-row md:justify-between">
+    <footer className="bg-gray-900 text-white  ">
+      <div className="container mx-auto flex flex-col md:flex-row md:justify-between p-12 ">
         <div className="mb-8 md:mb-0">
           <p className="hover:text-yellow-400 cursor-pointer">
             Email us: <a href="mailto:contact@kalyaneshwarmandir.com" className="hover:text-yellow-400">contact@kalyaneshwarmandir.com</a>
@@ -16,7 +16,7 @@ function Footer() {
 
           {/* This will be shown on larger screens */}
           <div className="hidden md:block mt-4">
-            <p>Designed and Developed by <br />© Royals Webtech Pvt.Ltd. 2024</p>
+            {/* <p>Designed and Developed by <br />© Royals Webtech Pvt.Ltd. 2024</p> */}
           </div>
 
           <i className="fa-solid fa-temple text-5xl mt-4"></i>
@@ -56,9 +56,32 @@ function Footer() {
       </div>
 
       {/* This will be shown on smaller screens */}
-      <div className="mt-12 md:hidden">
-        <p>Designed and Developed by <br />© Royals Webtech Pvt.Ltd. 2024</p>
+      <div className=" md:hidden pb-6 text-center">
+        <p>Design and Developed by Royals WebTech</p>
       </div>
+                  {/* <p className='text-center mt-8 '>Designed and Developed by © Royals Webtech Pvt.Ltd. 2024</p> */}
+
+
+                  {/*  */}
+                  <hr className=''/>
+                  <div className='hidden md:block'>
+                  <div className="   footer-end pb-10 pt-5">
+        <div className="footer-term">
+          <h4>© Copyright Shree Kalyaneshwar Mandir, Nagpur</h4>
+        </div>
+        <div className="term footer-term">
+          Terms & Conditions | Terms & Disclaimer | Contact Us
+        </div>
+
+        <div className="term footer-term">
+          Design and Developed by{" "}
+          <strong>
+            &#169; <i> Royals WebTech</i>
+          </strong>
+          .
+        </div>
+      </div>
+</div>
     </footer>
   );
 }
