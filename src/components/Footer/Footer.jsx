@@ -5,20 +5,23 @@ function Footer() {
     <footer className="bg-gray-900 text-white p-12">
       <div className="container mx-auto flex flex-col md:flex-row md:justify-between">
         <div className="mb-8 md:mb-0">
-         
           <p className="hover:text-yellow-400 cursor-pointer">
             Email us: <a href="mailto:contact@kalyaneshwarmandir.com" className="hover:text-yellow-400">contact@kalyaneshwarmandir.com</a>
           </p>
+          
           <h2 className='mt-12'>Address</h2>
           <div className="w-16 h-1 border-b-2 border-yellow-400 rounded-md mb-4"></div>
-        <p>Kalyaneshwar Mandir,<br /> Mahal, Nagpur, Maharashtra 440002</p>
+          
+          <p>Kalyaneshwar Mandir,<br /> Mahal, Nagpur, Maharashtra 440002</p>
 
-        <div className="mt-12">
-                    <p>Designed and Developed by <br />©Royals Webtech Pvt.Ltd.2024</p>
-                </div>
+          {/* This will be shown on larger screens */}
+          <div className="hidden md:block mt-4">
+            <p>Designed and Developed by <br />© Royals Webtech Pvt.Ltd. 2024</p>
+          </div>
 
           <i className="fa-solid fa-temple text-5xl mt-4"></i>
         </div>
+
         <div className="mb-8 md:mb-0">
           <h2 className="text-2xl font-bold mb-2">Kalyaneshwar Mandir</h2>
           <div className="w-36 h-1 border-b-2 border-yellow-400 rounded-md mb-4"></div>
@@ -29,6 +32,7 @@ function Footer() {
             <Link to="/" className="block hover:text-yellow-400 cursor-pointer">Contact Us</Link>
           </div>
         </div>
+
         <div className="mb-8 md:mb-0">
           <h2 className="text-2xl font-bold mb-2">Get Involved</h2>
           <div className="w-36 h-1 border-b-2 border-yellow-400 rounded-md mb-4"></div>
@@ -38,6 +42,7 @@ function Footer() {
             <Link to="/" className="block hover:text-yellow-400 cursor-pointer">Tenders</Link>
           </div>
         </div>
+
         <div>
           <h2 className="text-2xl font-bold mb-2">Social Media</h2>
           <div className="w-36 h-1 border-b-2 border-yellow-400 rounded-md mb-4"></div>
@@ -48,6 +53,11 @@ function Footer() {
             <a href="https://www.youtube.com" aria-label="YouTube" className="block hover:text-yellow-400 cursor-pointer">YouTube</a>
           </div>
         </div>
+      </div>
+
+      {/* This will be shown on smaller screens */}
+      <div className="mt-12 md:hidden">
+        <p>Designed and Developed by <br />© Royals Webtech Pvt.Ltd. 2024</p>
       </div>
     </footer>
   );
