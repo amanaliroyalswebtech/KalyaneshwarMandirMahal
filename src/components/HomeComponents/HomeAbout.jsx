@@ -82,13 +82,11 @@ const HomeAbout = () => {
         </div>
 
         <div className="info-div" data-aos="fade-left" data-aos-duration="1500">
-          <p>
-            Shri Kalyaneshwar Sansthan Trust, Nagpur, is the Governing and
-            Administrative body of Shri Kalyaneshwar Mandir and all others
-            temples in this premises, and devoted towards teachings of Bhole Baba{" "}
+          <p className="">
+          Shri Kalyaneshwar Sansthan Trust, Nagpur, serves as the guiding and administrative authority for Shri Kalyaneshwar Mandir and the other revered temples within its premises. Dedicated to preserving and promoting the spiritual teachings of Bhole Baba, the Trust is committed to enhancing the experience of Bholenath devotees who visit the sacred Kalyaneshwar Mandir.{" "}
             {/* <span className="red">"Sabka Malik Ek"</span> */}
-             and providing
-            amenities to Bholenath devotees who are visiting Kalyaneshwar Mandir.
+             {/* and providing
+            amenities to Bholenath devotees who are visiting Kalyaneshwar Mandir. */}
           </p>
           <button className="btn" >Read More</button>
         </div>

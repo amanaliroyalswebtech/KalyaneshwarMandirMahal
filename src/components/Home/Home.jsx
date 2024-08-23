@@ -11,6 +11,7 @@ import mandala1 from '/src/assets/mandala1.png'; // Add your image path here
 import HomeAbout from '../HomeComponents/HomeAbout';
 import HomeServices from '../HomeServices.jsx/HomeServices';
 import DailyUpdate from '../DailyUpdate/DailyUpdate';
+import Social from '../HomeSocial.jsx/Social';
 
 const Home = () => {
   useEffect(() => {
@@ -19,6 +20,7 @@ const Home = () => {
 
   return (
     <>
+   
       <section id="home" className="py-16 bg-orange-100 relative overflow-hidden">
         {/* Top Left Image */}
         <img
@@ -36,6 +38,7 @@ const Home = () => {
 
         {/* about */}
         <HomeAbout/>
+       
            
         {/* Heading */}
 
