@@ -9,7 +9,8 @@ function Footer() {
           <p className="hover:text-yellow-400 cursor-pointer">
             Email us: <a href="mailto:contact@kalyaneshwarmandir.com" className="hover:text-yellow-400">contact@kalyaneshwarmandir.com</a>
           </p>
-          <h2 className='text-center mt-12'>Address</h2>
+          <h2 className='mt-12'>Address</h2>
+          <div className="w-16 h-1 border-b-2 border-yellow-400 rounded-md mb-4"></div>
         <p>Kalyaneshwar Mandir,<br /> Mahal, Nagpur, Maharashtra 440002</p>
 
         <div className="mt-12">
@@ -22,19 +23,19 @@ function Footer() {
           <h2 className="text-2xl font-bold mb-2">Kalyaneshwar Mandir</h2>
           <div className="w-36 h-1 border-b-2 border-yellow-400 rounded-md mb-4"></div>
           <div className="space-y-2">
-            <Link to="/about" className="block hover:text-yellow-400 cursor-pointer">About Us</Link>
-            <Link to="/pooja-timings" className="block hover:text-yellow-400 cursor-pointer">Pooja Timings</Link>
-            <Link to="/events" className="block hover:text-yellow-400 cursor-pointer">Events</Link>
-            <Link to="/contact" className="block hover:text-yellow-400 cursor-pointer">Contact Us</Link>
+            <Link to="/" className="block hover:text-yellow-400 cursor-pointer">About Us</Link>
+            <Link to="/" className="block hover:text-yellow-400 cursor-pointer">Pooja Timings</Link>
+            <Link to="/" className="block hover:text-yellow-400 cursor-pointer">Events</Link>
+            <Link to="/" className="block hover:text-yellow-400 cursor-pointer">Contact Us</Link>
           </div>
         </div>
         <div className="mb-8 md:mb-0">
           <h2 className="text-2xl font-bold mb-2">Get Involved</h2>
           <div className="w-36 h-1 border-b-2 border-yellow-400 rounded-md mb-4"></div>
           <div className="space-y-2">
-            <Link to="/donation" className="block hover:text-yellow-400 cursor-pointer">Donate</Link>
-            <Link to="/volunteer" className="block hover:text-yellow-400 cursor-pointer">Volunteer</Link>
-            <Link to="/tenders" className="block hover:text-yellow-400 cursor-pointer">Tenders</Link>
+            <Link to="/" className="block hover:text-yellow-400 cursor-pointer">Donate</Link>
+            <Link to="/" className="block hover:text-yellow-400 cursor-pointer">Volunteer</Link>
+            <Link to="/" className="block hover:text-yellow-400 cursor-pointer">Tenders</Link>
           </div>
         </div>
         <div>
