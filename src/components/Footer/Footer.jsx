@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
 function Footer() {
@@ -6,19 +5,17 @@ function Footer() {
     <footer className="bg-gray-900 text-white p-12">
       <div className="container mx-auto flex flex-col md:flex-row md:justify-between">
         <div className="mb-8 md:mb-0">
-          <div className="flex items-center mb-4">
-            <i className="fa-solid fa-paper-plane text-3xl mr-2"></i>
-            <i className="fa-solid fa-circle my-auto p-[5px] text-red-500"></i>
-            <i className="fa-solid fa-circle my-auto p-[5px] text-green-500"></i>
-            <i className="fa-solid fa-circle my-auto p-[5px] text-yellow-500"></i>
-          </div>
+         
           <p className="hover:text-yellow-400 cursor-pointer">
-            Email us: <a href="mailto:contact@kalyaneshwarimandir.com" className="hover:text-yellow-400">contact@kalyaneshwarimandir.com</a>
+            Email us: <a href="mailto:contact@kalyaneshwarmandir.com" className="hover:text-yellow-400">contact@kalyaneshwarmandir.com</a>
           </p>
+          <h2 className='text-center mt-12'>Address</h2>
+        <p>Kalyaneshwar Mandir,<br /> Mahal, Nagpur, Maharashtra 440002</p>
+
           <i className="fa-solid fa-temple text-5xl mt-4"></i>
         </div>
         <div className="mb-8 md:mb-0">
-          <h2 className="text-2xl font-bold mb-2">Kalyaneshwari Mandir</h2>
+          <h2 className="text-2xl font-bold mb-2">Kalyaneshwar Mandir</h2>
           <div className="w-36 h-1 border-b-2 border-yellow-400 rounded-md mb-4"></div>
           <div className="space-y-2">
             <Link to="/about" className="block hover:text-yellow-400 cursor-pointer">About Us</Link>

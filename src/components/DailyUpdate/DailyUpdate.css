@@ -1,0 +1,223 @@
+.dailyupdateSection{
+  margin-top: 7rem;
+}
+.update-main-div {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(3, 1fr);
+    /* background-color: red; */
+    text-align: center;
+    padding: 2.5rem 2rem 0rem 2rem;
+    column-gap: 2rem;
+    margin-top: 1rem;
+  }
+  
+  .update-main-div h3 {
+    color: white;
+  }
+  
+  .update-innerdivs {
+    /* background-color: orangered; */
+    /* width: 190px;
+    height: 254px; */
+    /* border-radius: 30px; */
+    /* background: rgb(194, 95, 4);
+    box-shadow: 5px 5px 10px rgb(110, 87, 87), -5px -5px 10px rgb(110, 87, 87); */
+    background: url("../../assets//day.png")no-repeat ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1rem;
+  }
+  
+  
+  
+  .update-alram-ico {
+    position: relative;
+    top: 3px;
+  }
+  
+  /* .update-latest-update {
+    background-color: orangered;
+  }
+  
+  .update-upcoming-fest{
+    background-color: orangered;
+  }
+   */
+  
+  .update-card {
+    position: relative;
+    width: 350px;
+    height: 250px;
+    border-radius: 14px;
+    z-index: 1111;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: red;
+    /* box-shadow: 2px 2px 8px #bebebe, -2px -2px 8px #ffffff; */
+  }
+  
+  .update-bg {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 340px;
+    height: 240px;
+    z-index: 2;
+    /* background: rgba(255, 255, 255, 0.95); */
+    /* backdrop-filter: blur(24px); */
+    border-radius: 10px;
+    overflow: hidden;
+    /* outline: 2px solid white; */
+  }
+  
+  .update-blob {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: 250px;
+    height: 150px;
+    border-radius: 50%;
+    /* background-color: greenyellow; */
+    opacity: 1;
+    filter: blur(10px);
+    animation: blob-bounce 5s infinite ease;
+  }
+  
+  @keyframes blob-bounce {
+    0% {
+      transform: translate(-100%, -100%) translate3d(0, 0, 0);
+    }
+  
+    25% {
+      transform: translate(-100%, -100%) translate3d(100%, 0, 0);
+    }
+  
+    50% {
+      transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
+    }
+  
+    75% {
+      transform: translate(-100%, -100%) translate3d(0, 100%, 0);
+    }
+  
+    100% {
+      transform: translate(-100%, -100%) translate3d(0, 0, 0);
+    }
+  }
+  
+  .update-scrolling-container {
+    height: 226px;
+    width: 340px;
+    overflow: hidden;
+    /* border: 1px solid #ccc;  */
+  }
+  
+  .update-content {
+    animation: scroll 10s linear infinite; /* Adjust duration as needed */
+    /* height: 240px; */
+  }
+  
+  .update-content-daily {
+    animation: scroll-update-daily 20s linear infinite; /* Adjust duration as needed */
+    /* height: 240px; */
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+  @keyframes scroll-update-daily {
+    0% {
+      transform: translateY(20%);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+  
+  .update-content:hover {
+    animation-play-state: paused;
+  }
+  
+  .update-content-daily:hover {
+    animation-play-state: paused;
+  }
+  
+  .update-content p {
+    margin: 10px;
+  }
+  
+  .update-content a {
+    text-decoration: none;
+    color: red;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  }
+  
+  .update-upcoming-fest {
+    font-weight: 500;
+  }
+  
+  .update-main-innerdiv {
+    /* display: flex; */
+  
+    /* width: 100%; */
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 3fr;
+  }
+  
+  .update-daily-timediv {
+    width: 70px;
+    border-right: 1px solid black;
+  }
+
+  
+@media only screen and (max-width: 480px) {
+  .update-main-div {
+    padding: 0.5rem; /* Further adjust padding */
+  }
+}
+
+
+@media only screen and (max-width: 767px) {
+  .update-card {
+    width: 300px !important;
+  }
+
+  .update-bg {
+    width: 290px !important;
+  }
+
+  .update-scrolling-container {
+    width: 300px !important;
+  }
+
+  .update-main-div {
+
+    padding: 0.5rem 1rem 0 2rem;
+    /* margin-right: 5%; */
+  
+  }
+
+  
+  .update-main-div{
+    display: flex !important;
+    flex-direction: column;
+
+}
+
+.update-innerdivs {
+    margin-top: 30px;
+}
+}

@@ -1,0 +1,207 @@
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    transform: translate(0%, 30%);
+    z-index: 2;
+    height: 100%;
+  }
+  
+  .social-btn {
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    font-family: "Titillium Web", sans-serif;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    background: white;
+    margin: 5px;
+    transition: 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .social-btn span {
+    width: 0px;
+    overflow: hidden;
+    transition: 1s;
+    text-align: center;
+  }
+  
+  .social-btn:hover {
+    width: 265px;
+    border-radius: 5px;
+  }
+  
+  .social-btn:hover span {
+    padding: 2px;
+    width: max-content;
+  }
+  
+  #facebook {
+    fill: #192fda;
+    font-size: 28px;
+  }
+  
+  #insta {
+    fill: #da214f;
+    font-size: 28px;
+  }
+  
+  #twitter {
+    fill: #5c6efa;
+    font-size: 28px;
+  }
+  
+  #youtube {
+    fill: #da1919;
+    font-size: 28px;
+  }
+  
+  /* menu css */
+  .menu {
+    position: fixed;
+    transform: translate(0%, 65%);
+    z-index: 1111;
+    height: 100%;
+  }
+  
+  .menu a {
+    position: absolute;
+    background-color: rgb(197 123 31) !important;
+    border: 3px solid white;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+    padding: auto;
+    padding: 8px 8px;
+  }
+  
+  .menu a.hidden {
+    visibility: hidden !important;
+  }
+  
+  .menu a:last-child {
+    padding: 10px 8px;
+  }
+  
+  .menu a:nth-child(1) {
+    background-color: rgb(255, 255, 255) !important;
+    padding: 10px 8px;
+  }
+  
+  .menu a:nth-child(1).show {
+    transform: rotate(-70deg) translate(100px) rotate(70deg);
+  }
+  
+  .menu a:nth-child(2) {
+    background-color: rgb(255, 255, 255) !important;
+  }
+  
+  .menu a:nth-child(2).show {
+    transform: rotate(-25deg) translate(100px) rotate(25deg);
+  }
+  
+  .menu a:nth-child(3) {
+    background-color: rgb(255, 255, 255) !important;
+  }
+  
+  .menu a:nth-child(3).show {
+    transform: rotate(25deg) translate(100px) rotate(-25deg);
+  }
+
+  .menu a:nth-child(4) {
+    background-color: rgb(255, 255, 255) !important;
+  }
+  
+  .menu a:nth-child(4).show {
+    transform: rotate(70deg) translate(100px) rotate(-70deg);
+  }
+
+  #soc {
+   width: 30px;
+   height: 30px;
+   color: white;
+  }
+
+  #facebook {
+    width: 30px;
+   height: 30px;
+   color: blue;
+  }
+
+  .menu a:hover  {
+    scale: 1.07;
+    transition: all ease-in-out .2s;
+   }
+
+
+   .trans span:nth-child(1){
+    background-color: rgb(197 123 31)!important;
+   }
+   
+   .trans a:nth-child(2) {
+    background-color: transparent !important;
+    border: none !important;
+    
+  }
+   .trans a:last-child {
+    padding: 10px 8px;
+  }
+
+
+
+   .trans {
+    transform: translate(0%, 40%) !important;
+    
+   }
+
+   .trans img {
+    width: 32px;
+   height: 32px; 
+   
+
+   }
+
+   .label {
+      display: flex;
+      text-decoration: none;
+      align-items: center;
+   }
+
+   .don {
+    background: transparent;
+    position: absolute;
+    transform: translate(50px, 15px);
+    color: white !important;
+    z-index: 0;
+    padding: 10px;
+    font-weight: 500;
+    font-size: 14px;
+    border-radius: 10px;
+
+   }
+
+
+   .music_menu {
+    position: fixed;
+    transform: translate(0%, 20%);
+    z-index: 1111;
+    height: 100%;
+  }
+  
+  .music_menu a {
+    position: absolute;
+    background-color: rgb(197 123 31) !important;
+    border: 3px solid white;
+    display: flex;
+    color:white;
+    align-items: center;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+    padding: 14px 14px;
+  }
