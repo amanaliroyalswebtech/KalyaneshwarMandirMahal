@@ -1,0 +1,192 @@
+
+.about {
+    position: relative;
+    width: 100% !important;
+    height: auto;
+    /* background: url(./assets/about_banner.jpg); */
+    background-position: bottom;
+    background-size: cover;
+    padding-bottom: 30px;
+  }
+  
+  .title-wrapper {
+    border-radius: 10px;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    transition: all ease-in-out 0.2s;
+    margin: 5px auto;
+    padding-top: 10px;
+  }
+  
+  .title-wrapper:hover {
+    scale: 1.04;
+    color: radial-gradient(827px at 47.3% 48%,
+        rgb(255, 255, 255) 0%,
+        rgb(216, 176, 138) 90%);
+  }
+  
+  .gold-plate {
+    margin: 0;
+    text-align: center;
+  }
+  
+  .goldimg {
+    margin: 10px;
+  }
+  
+  
+  
+  .about-head h3 {
+    color: red;
+    font-size: 34px;
+    text-align: center;
+  }
+  
+  .about-head-span {
+    font: 700 1.2em/1 "Oswald", sans-serif;
+    letter-spacing: 0;
+  
+    display: block;
+    margin: 0 auto;
+    text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
+    background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y;
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* -webkit-text-fill-color: transparent; */
+    -webkit-animation: aitf 80s linear infinite;
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+  }
+  
+  .pillar {
+    position: absolute;
+    height: auto;
+    width: 20%;
+    right: 7%;
+    top: 0%;
+  
+  }
+  
+  .pillar2 {
+    position: absolute;
+    height: auto;
+    width: 20%;
+    left: 0%;
+    top: 0%;
+  
+  }
+
+
+  .contain {
+    width: 90%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Ensures responsiveness */
+  }
+  
+  .info-div {
+    width: 100%;
+    text-align: center;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #4d5765;
+  }
+  
+  @media (min-width: 768px) {
+    .info-div {
+      width: 40%;
+    }
+  }
+  
+  .info-div p {
+    font-size: 20px;
+    padding: 20px;
+  }
+  
+  .image-div {
+    width: 100%;
+    position: relative;
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  @media (min-width: 768px) {
+    .image-div {
+      width: 50%;
+      padding-left: 40px;
+    }
+  }
+  
+  .image-wrapper {
+    position: relative;
+    display: grid;
+    place-items: center;
+  }
+  
+  .bg {
+    z-index: 0;
+    animation: rotatelogo 8s linear infinite !important;
+    max-width: 100%;
+  }
+  
+  .sai {
+    position: absolute;
+    width: 60%; /* Adjust this value as needed */
+    max-width: 400px;
+    transition: all ease-in-out 1s;
+    transform: translatey(5%); /* Shift to the right */
+  }
+  
+  /* Adjust width of .sai for different screen sizes */
+  @media (max-width: 768px) {
+    .sai {
+      width: 70%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .sai {
+      width: 80%;
+    }
+  }
+  
+  @keyframes rotatelogo {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .sai:hover {
+    scale: 1.05;
+  }
+  
+  .red {
+    color: red;
+    font-weight: 700;
+  }
+  
+  .btn {
+    background-color: #de700f;
+    color: #fff;
+    transition: background-color 1s;
+    padding: 12px 20px;
+    border-radius: 12px;
+    border: none;
+    font-size: 15px;
+  }
+  
+  .btn:hover {
+    background-color: #613e20;
+    scale: 1.05;
+  }
+  

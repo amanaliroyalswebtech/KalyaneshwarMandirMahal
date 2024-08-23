@@ -8,6 +8,9 @@ import mandirImage4 from '/src/assets/mandirImage4.jpg';
 import mandirImage5 from '/src/assets/mandirImage5.jpg';
 import mandirImage6 from '/src/assets/mandirImage6.jpg';
 import mandala1 from '/src/assets/mandala1.png'; // Add your image path here
+import HomeAbout from '../HomeComponents/HomeAbout';
+import HomeServices from '../HomeServices.jsx/HomeServices';
+import DailyUpdate from '../DailyUpdate/DailyUpdate';
 
 const Home = () => {
   useEffect(() => {
@@ -16,7 +19,7 @@ const Home = () => {
 
   return (
     <>
-      <section id="home" className="py-16 bg-orange-100 relative">
+      <section id="home" className="py-16 bg-orange-100 relative overflow-hidden">
         {/* Top Left Image */}
         <img
           src={mandala1}
@@ -31,9 +34,14 @@ const Home = () => {
           className="absolute top-0 right-0 w-[80px] h-[80px] md:w-[300px] md:h-[300px] sm:w-30 sm:h-30 object-cover"
         />
 
+        {/* about */}
+        <HomeAbout/>
+           
         {/* Heading */}
+
+
         <div className="text-center mb-12 relative z-10">
-          <h2 className="text-4xl font-bold text-orange-700 font-poppins">Kalyaneshwar Mandir</h2>
+          <h2 className="text-4xl font-bold text-[#FF0000] font-poppins">Kalyaneshwar Mandir</h2>
           <p className="text-lg text-gray-600 mt-4 font-poppins">
             Welcome to the sacred Kalyaneshwar Mandir, a place of devotion and peace.
           </p>
@@ -134,6 +142,11 @@ const Home = () => {
             </div>
           </div>
         </div>
+  
+
+      {/* services */}
+      <HomeServices/>
+      <DailyUpdate/>
       </section>
     </>
   );
