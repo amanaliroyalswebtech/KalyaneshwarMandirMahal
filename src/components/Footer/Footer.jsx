@@ -13,7 +13,7 @@ function Footer() {
         <p>Kalyaneshwar Mandir,<br /> Mahal, Nagpur, Maharashtra 440002</p>
 
         <div className="mt-12">
-                    <p>Designed and Developed by <br /> ©Royals Webtech Pvt.Ltd.2024</p>
+                    <p>Designed and Developed by <br />©Royals Webtech Pvt.Ltd.2024</p>
                 </div>
 
           <i className="fa-solid fa-temple text-5xl mt-4"></i>
