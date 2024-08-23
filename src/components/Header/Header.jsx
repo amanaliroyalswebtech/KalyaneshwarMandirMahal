@@ -2,6 +2,9 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import PopupCard from '../PopupCard/PopupCard'
 import image1 from '/src/assets/shivjilogo1.png'
+import img1 from "../../assets/headerlogo4.jpg"
+import img2 from "../../assets/mandirimage1.3.avif"
+import img3 from "../../assets/bannerimage1.jpg"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
@@ -14,9 +17,9 @@ const Header = () => {
 
   // Images for the modal
   const images = [
-    '/src/assets/bannerimage1.jpg',
-    '/src/assets/mandirimage1.3.avif',
-    '/src/assets/headerlogo4.jpg',
+    img3,
+    img2,
+    img1
   ];
 
   useEffect(() => {
@@ -71,85 +74,85 @@ const Header = () => {
 
             {/* Dropdown for About */}
             <li className="relative group text-center">
-              <Link to="/about" className="hover:text-orange-600 focus:outline-none">
+              <Link to="/" className="hover:text-orange-600 focus:outline-none">
               About<FontAwesomeIcon 
       icon={faChevronDown} 
       className=" text-gray-500 hover:text-orange-600 h-3 w-6" // Rotate the icon 90 degrees
     />
               </Link>
               <div className="absolute left-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity ease-in-out duration-300 z-50">
-                <Link to="/about" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">About us</Link>
-                <Link to="/about" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">History</Link>
+                <Link to="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">About us</Link>
+                <Link to="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">History</Link>
               </div>
             </li>
 
             {/* Dropdown for Events */}
             <li className="relative group text-center">
-            <Link to="/about" className="hover:text-orange-600 focus:outline-none">
+            <Link to="/" className="hover:text-orange-600 focus:outline-none">
               Events<FontAwesomeIcon 
       icon={faChevronDown} 
       className=" text-gray-500 hover:text-orange-600 h-3 w-6" // Rotate the icon 90 degrees
     />
               </Link>
               <div className="absolute left-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity ease-in-out duration-300 z-50">
-                <Link to="/events" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Upcoming</Link>
-                <Link to="/events" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Recent</Link>
+                <Link to="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Upcoming</Link>
+                <Link to="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Recent</Link>
               </div>
             </li>
 
             {/* Dropdown for Gallery */}
             <li className="relative group text-center">
-            <Link to="/about" className="hover:text-orange-600 focus:outline-none">
+            <Link to="/" className="hover:text-orange-600 focus:outline-none">
               Gallery<FontAwesomeIcon 
       icon={faChevronDown} 
       className=" text-gray-500 hover:text-orange-600 h-3 w-6" // Rotate the icon 90 degrees
     />
               </Link>
               <div className="absolute left-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity ease-in-out duration-300 z-50">
-                <Link to="/gallery" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Mandir Images</Link>
-                <Link to="/gallery" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Mandir Videos</Link>
+                <Link to="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Mandir Images</Link>
+                <Link to="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Mandir Videos</Link>
               </div>
             </li>
 
             {/* Dropdown for Tenders */}
             <li className="relative group text-center">
-            <Link to="/about" className="hover:text-orange-600 focus:outline-none">
+            <Link to="/" className="hover:text-orange-600 focus:outline-none">
               Tender<FontAwesomeIcon 
       icon={faChevronDown} 
       className=" text-gray-500 hover:text-orange-600 h-3 w-6" // Rotate the icon 90 degrees
     />
               </Link>
               <div className="absolute left-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity ease-in-out duration-300 z-50">
-                <Link to="/tenders" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Latest Tender</Link>
-                <Link to="/tenders" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Old Tenders</Link>
+                <Link to="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Latest Tender</Link>
+                <Link to="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Old Tenders</Link>
               </div>
             </li>
 
             {/* Dropdown for Donation */}
             <li className="relative group text-center">
-            <Link to="/about" className="hover:text-orange-600 focus:outline-none">
+            <Link to="/" className="hover:text-orange-600 focus:outline-none">
               Donation<FontAwesomeIcon 
       icon={faChevronDown} 
       className=" text-gray-500 hover:text-orange-600 h-3 w-6" // Rotate the icon 90 degrees
     />
               </Link>
               <div className="absolute left-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity ease-in-out duration-300 z-50">
-                <Link to="/donation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Donation</Link>
-                <Link to="/donation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Charity</Link>
+                <Link to="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Donation</Link>
+                <Link to="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Charity</Link>
               </div>
             </li>
 
             {/* Dropdown for Contact */}
             <li className="relative group text-center">
-            <Link to="/about" className="hover:text-orange-600 focus:outline-none">
+            <Link to="/" className="hover:text-orange-600 focus:outline-none">
               Contact<FontAwesomeIcon 
       icon={faChevronDown} 
       className=" text-gray-500 hover:text-orange-600 h-3 w-6" // Rotate the icon 90 degrees
     />
               </Link>
               <div className="absolute left-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity ease-in-out duration-300 z-50">
-                <Link to="/contact" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Contact us</Link>
-                <Link to="/contact" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Whatsapp</Link>
+                <Link to="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Contact us</Link>
+                <Link to="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600">Whatsapp</Link>
               </div>
             </li>
           </ul>
@@ -201,22 +204,22 @@ const Header = () => {
               <Link to="/" className="block px-4 py-2 text-white hover:bg-gray-200 hover:text-orange-600">Home</Link>
             </li>
             <li>
-              <Link to="/about" className="block px-4 py-2 text-white hover:bg-gray-200 hover:text-orange-600">About</Link>
+              <Link to="/" className="block px-4 py-2 text-white hover:bg-gray-200 hover:text-orange-600">About</Link>
             </li>
             <li>
-              <Link to="/events" className="block px-4 py-2 text-white hover:bg-gray-200 hover:text-orange-600">Events</Link>
+              <Link to="/" className="block px-4 py-2 text-white hover:bg-gray-200 hover:text-orange-600">Events</Link>
             </li>
             <li>
-              <Link to="/gallery" className="block px-4 py-2 text-white hover:bg-gray-200 hover:text-orange-600">Gallery</Link>
+              <Link to="/" className="block px-4 py-2 text-white hover:bg-gray-200 hover:text-orange-600">Gallery</Link>
             </li>
             <li>
-              <Link to="/tenders" className="block px-4 py-2 text-white hover:bg-gray-200 hover:text-orange-600">Tenders</Link>
+              <Link to="/" className="block px-4 py-2 text-white hover:bg-gray-200 hover:text-orange-600">Tenders</Link>
             </li>
             <li>
-              <Link to="/donation" className="block px-4 py-2 text-white hover:bg-gray-200 hover:text-orange-600">Donation</Link>
+              <Link to="/" className="block px-4 py-2 text-white hover:bg-gray-200 hover:text-orange-600">Donation</Link>
             </li>
             <li>
-              <Link to="/contact" className="block px-4 py-2 text-white hover:bg-gray-200 hover:text-orange-600">Contact</Link>
+              <Link to="/" className="block px-4 py-2 text-white hover:bg-gray-200 hover:text-orange-600">Contact</Link>
             </li>
           </ul>
         </div>

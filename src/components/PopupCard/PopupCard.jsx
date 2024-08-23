@@ -1,13 +1,13 @@
-import image1 from '/src/assets/mandirImage6.jpg';
-import backgroundImage from '/src/assets/mandirImage7.jpg';
-
+import image1 from '../../assets/bannerimage5.jpg'
+// import backgroundImage from '/src/assets/mandirImage7.jpg';
+import image2 from "../../assets/mandirimage7.jpg"
 const PopupCard = ({ onClose }) => {
   return (
     <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
       <div
         className="relative bg-white p-6 rounded-lg shadow-lg max-w-xs w-full mx-auto md:max-w-md md:w-1/2"
         style={{
-          backgroundImage: `url(${backgroundImage})`,
+          backgroundImage: `url(${image2})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
