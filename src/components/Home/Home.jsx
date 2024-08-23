@@ -11,7 +11,7 @@ import mandala1 from '/src/assets/mandala1.png'; // Add your image path here
 import HomeAbout from '../HomeComponents/HomeAbout';
 import HomeServices from '../HomeServices.jsx/HomeServices';
 import DailyUpdate from '../DailyUpdate/DailyUpdate';
-import Social from '../HomeSocial.jsx/Social';
+// import Social from '../HomeSocial.jsx/Social';
 
 const Home = () => {
   useEffect(() => {
@@ -124,7 +124,7 @@ const Home = () => {
               <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4 rounded-b-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <h3 className="text-xl font-semibold mb-2">Architectural Beauty</h3>
                 <p className="text-sm">
-                  The mandir's architecture is a blend of traditional and contemporary styles, showcasing intricate designs and craftsmanship.
+                  The mandirs architecture is a blend of traditional and contemporary styles, showcasing intricate designs and craftsmanship.
                 </p>
               </div>
             </div>
