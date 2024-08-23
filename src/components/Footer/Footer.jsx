@@ -12,6 +12,10 @@ function Footer() {
           <h2 className='text-center mt-12'>Address</h2>
         <p>Kalyaneshwar Mandir,<br /> Mahal, Nagpur, Maharashtra 440002</p>
 
+        <div className="mt-12">
+                    <p>Designed and Developed by <br /> ©Royals Webtech Pvt.Ltd.</p>
+                </div>
+
           <i className="fa-solid fa-temple text-5xl mt-4"></i>
         </div>
         <div className="mb-8 md:mb-0">
